@@ -235,6 +235,7 @@ func (sess *session) Break(c chan<- bool) {
 
 func (sess *session) handleRequests(reqs <-chan *gossh.Request) {
 	for req := range reqs {
+		log.Println("SSH: ", req.Type)
 		switch req.Type {
 		case "shell", "exec":
 			if sess.handled {
