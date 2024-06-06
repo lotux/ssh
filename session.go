@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"net"
 	"sync"
+	"log"
 
 	"github.com/anmitsu/go-shlex"
 	gossh "golang.org/x/crypto/ssh"
